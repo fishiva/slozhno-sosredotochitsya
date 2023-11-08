@@ -2,4 +2,209 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background: var(--background-image) no-repeat center top, var(--bg-color);
+  background-size: auto 768px;
+  background-attachment: fixed;
+  color: var(--text-color);
 }
+
+.header {
+  position: relative;
+  padding: 0 20px;
+  height: 100vh;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header {
+    padding: 0 10px;
+  }
+}
+
+.header_record {
+  position: absolute;
+  top: 20px;
+  right: 48px;
+  color: var(--record-color);
+  text-transform: uppercase;
+  line-height: 25px; /* 138.889% */
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header_record {
+    top: 10px;
+    right: 38px;
+  }
+}
+
+.header_record::after {
+  content: '';
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  top: 9px;
+  right: -19px;
+  flex-shrink: 0;
+  filter: drop-shadow(0px 0px 4px var(--record-color)); 
+  border-radius: 50%;
+  background-color: var(--record-color);
+}
+
+.decorated-zone::before { 
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+  top: 20px;
+  right: 20px;
+  color: currentColor;
+}
+
+.decorated-zone::after { 
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+  bottom: 20px;
+  left: 20px;
+  color: currentColor;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Navigation */
+
+.header__theme-menu {
+  padding-top: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+@media (width < 1024px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header__theme-menu-list {
+    gap: 10px;
+  }
+}
+
+.header__theme-menu-button {
+  background-color: inherit;
+  color: var(--nav-color);
+  border: transparent;
+  padding: 1.5px 13px;
+  line-height: 18px; /* 100% */
+}
+
+.header__theme-menu-button:hover {
+  border: var(--hover-var);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--nav-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid;
+  pointer-events: none
+}
+
+@media (width < 1024px) and (width >= 768px) {
+  .header__theme-menu-button {
+    padding-top: 193.5px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header__theme-menu-button {
+    padding-top: 75px;
+  }
+}
+
+/* Header Title */
+
+.header_content {
+  /* display: flex;
+  flex-direction: column;
+  gap: 76px;
+  margin-block-start: 238px;
+  /* margin-block-end: 114px; */ 
+
+  display: grid;
+  grid-template-rows: 1fr, 1fr;
+  gap: 76px;
+  margin-block-start: 238px;
+  margin-block-end: 138px;
+
+}
+
+@media (width < 1024px) and (width >= 768px) {
+  .header_content {
+    margin-block-start: 174.5px;
+    gap: 162px;
+  }
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .header_content {
+    margin-block-start: 66.5;
+    gap: 55px;
+  }
+}
+
+.header_logo {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--title-shadow);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  margin-inline-start: -2%;
+  /* line-height: 82.5%; 129.525px; */
+}
+
+@media (width < 1024px) and (width >= 375px) {
+  .header_logo {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+} 
+
+.header_text_content {
+  inline-size: 50%;
+  justify-self: end;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--article-header);
+}
+
+
+/* Задать более менее хороший размер, при котором будет раздвигаться надпись на весь экран */
+@media (width < 768px) {
+  .header_text_content {
+    inline-size: 100%;
+  }
+}
+.title-decor {
+  background-color: var(--title-decor);
+}
+
