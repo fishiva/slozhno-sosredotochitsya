@@ -37,6 +37,5 @@
     --section-title-color: var(--title-shadow);
     --background-image: url(../images/cover-image-light.png);
     --hover-var: 1px solid rgba(50, 49, 45, 0.40);
-
   }
 }
