@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--background-image);
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
