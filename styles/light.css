@@ -9,8 +9,8 @@
   --nav-color: var(--text-color);
   --corner-color : var(--text-color);
   --article-header: var(--text-color);
-  --article-title-color: var(--bg-color);
-  --section-title-color: var(--title-shadow);
+  --article-title-color: var(--text-color);
+  --section-title-color: var(--text-color);
   --background-image: url(../images/cover-image-light.png);
   --hover-var: 1px solid rgba(50, 49, 45, 0.40);
 }
