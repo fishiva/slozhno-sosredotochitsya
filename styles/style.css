@@ -240,8 +240,7 @@
 
 @media (width < 768px) and (width >=375px) {
   .main {
-    margin: 40px 0  ;
-    padding: 0 10px;
+    padding: 40px 10px 0px;
     gap: 50px;
   }
 }
@@ -267,7 +266,7 @@
   color: var(--section-title-color);
   font-size: 18px;
   font-weight: 700;
-  line-height: 23.4px; 
+  line-height: 23.4px;
 }
 
 @media (width < 1024px) and (width >=768px) {
@@ -396,7 +395,7 @@
 }
 
 .article_block_item_text_link:focus-visible {
-  border: 1px solid var(--text-color);       
+  border: 1px solid var(--text-color);
 }
 
 /* Gallery */
