@@ -410,7 +410,7 @@
 .article_block_item_text_link {
   border: transparent;
   text-decoration: none;
-  text-shadow: 2px 2px 0px var(--title-color);
+  text-shadow: 2px 2px 0px var(--title-shadow);
 }
 
 .article_block_item_text_link:hover {
